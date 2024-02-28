@@ -13,6 +13,16 @@ const price=event.target.parentNode.childNodes[3].childNodes[1].innerText;
 const category=event.target.parentNode.childNodes[5].innerText;
 
 const sselectedPlayersContainer=document.getElementById('selected-players-container')
+/* budget */
+const budget=getConvertedValue('budget')
+document.getElementById('budget').innerText = budget - parseInt(price)
+
+const cartCount=getConvertedValue('cart')
+document.getElementById('cart').innerText= cartCount  + 1;
+const leftCount=getConvertedValue('left')
+document.getElementById('left').innerText= leftCount - 1
+
+
 
 const div=document.createElement('div')
 div.classList.add('selected-player')
